@@ -1,11 +1,13 @@
 {
   "name": "temp_electron",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "",
   "main": "./index.js",
   "scripts": {
+    "start": "electron .",
     "build": "electron-builder build --win --publish never",
-    "deploy": "electron-builder build  --win --publish always"
+    "deploy": "electron-builder build  --win --publish always",
+    "publish": "build -p always"
   },
   "author": "Kanit",
   "license": "MIT",
@@ -37,6 +39,7 @@
     "electron-builder": "^24.6.4",
     "@electron-forge/maker-squirrel": "^6.4.2",
     "electron-squirrel-startup": "^1.0.0",
-    "@types/electron": "^1.6.10"
+    "@types/electron": "^1.6.10",
+    "electron-prebuilt-compile": "^4.0.0"
   }
 }
