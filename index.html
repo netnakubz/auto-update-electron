@@ -27,7 +27,7 @@
 </head>
 <body>
   <h1>Electron Auto Update Example</h1>
-  <p id="version"></p>
+  <p id="version">1.0.4</p>
   <div id="notification" class="hidden">
     <p id="message"></p>
     <button id="close-button" onClick="closeNotification()">Close</button>
@@ -60,10 +60,10 @@
       notification.classList.remove("hidden");
     });
     function closeNotification() {
-  notification.classList.add('hidden');
-}
-function restartApp() {
-  ipcRenderer.send('restart_app');
-}
+      notification.classList.add("hidden");
+    }
+    function restartApp() {
+      ipcRenderer.send("restart_app");
+    }
   </script>
 </body>
