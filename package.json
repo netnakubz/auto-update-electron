@@ -1,18 +1,18 @@
 {
   "name": "temp_electron",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "",
   "main": "./index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "electron-builder build --win --publish never",
+    "deploy": "electron-builder build  --win --publish always"
   },
   "author": "Kanit",
   "license": "MIT",
   "dependencies": {
-    "electron": "^27.0.2",
-    "electron-builder": "^24.6.4",
     "electron-log": "^3.0.1",
-    "tls-check": "^0.2.0"
+    "tls-check": "^0.2.0",
+    "electron-updater": "^4.0.6"
   },
   "build": {
     "publish": [
@@ -33,9 +33,10 @@
     }
   },
   "devDependencies": {
+    "electron": "^27.0.2",
+    "electron-builder": "^24.6.4",
     "@electron-forge/maker-squirrel": "^6.4.2",
     "electron-squirrel-startup": "^1.0.0",
-    "@types/electron": "^1.6.10",
-    "electron-updater": "^4.0.6"
+    "@types/electron": "^1.6.10"
   }
 }
